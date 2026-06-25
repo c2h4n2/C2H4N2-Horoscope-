@@ -1,0 +1,9 @@
+{
+  "name": "Cosmic Daily Horoscope",
+  "short_name": "CosmicDaily",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#14002e",
+  "theme_color": "#35106b",
+  "description": "Daily, weekly, monthly and yearly horoscope app."
+}

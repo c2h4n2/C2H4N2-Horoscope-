@@ -201,10 +201,9 @@
 
       <form id="horoscopeForm">
         <div><label for="dob">Date of birth</label><input id="dob" name="dob" type="date" required /></div>
-        <div><label for="birthTime">Birth time</label><input id="birthTime" name="birthTime" type="time" /></div>
+        <div><label for="birthTime">Birth time (optional)</label><input id="birthTime" name="birthTime" type="time" /></div>
         <div><label for="gender">Gender</label><select id="gender" name="gender" required><option value="">Choose one</option><option>Female</option><option>Male</option><option>Non-binary</option><option>Prefer not to say</option></select></div>
         <div><label for="partnerSign">Partner sign</label><select id="partnerSign" name="partnerSign"><option value="">Optional</option></select></div>
-        <div><label for="birthPlace">Birth place</label><input id="birthPlace" name="birthPlace" placeholder="City, country" /></div>
         <div><label for="language">Language</label><select id="language"><option>English</option><option>Spanish</option><option>French</option><option>Hindi</option></select></div>
         <div><label for="readingType">Reading type</label><select id="readingType"><option>General</option><option>Love</option><option>Career</option><option>Health</option><option>Finance</option></select></div>
         <button type="submit">Reveal my horoscope</button>
@@ -402,7 +401,6 @@
       const birthTime = document.getElementById("birthTime").value || "unknown";
       const gender = document.getElementById("gender").value;
       const partnerSign = document.getElementById("partnerSign").value;
-      const birthPlace = document.getElementById("birthPlace").value || "your birthplace";
       const readingType = document.getElementById("readingType").value;
       const zodiac = getZodiac(dob);
       const age = getAge(dob);
@@ -412,7 +410,7 @@
 
       const summary = document.getElementById("summary");
       summary.classList.remove("hidden");
-      summary.innerHTML = `<p>Your sign is <strong>${zodiac.icon} ${zodiac.sign}</strong>, a ${zodiac.element} sign. Your selected focus is <strong>${readingType}</strong>. Birth chart-style note: birth time <strong>${birthTime}</strong>, birthplace <strong>${birthPlace}</strong>.</p>`;
+      summary.innerHTML = `<p>Your sign is <strong>${zodiac.icon} ${zodiac.sign}</strong>, a ${zodiac.element} sign. Your selected focus is <strong>${readingType}</strong>. Birth chart-style note: birth time <strong>${birthTime}</strong>.</p>`;
 
       document.getElementById("daily").innerHTML = `
         <article class="feature-card"><h3>Today</h3><p>${pick(horoscopeLines, seed)}</p></article>

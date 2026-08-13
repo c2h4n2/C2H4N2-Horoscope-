@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="google-adsense-account" content="ca-pub-2606491312719237" />
+
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2606491312719237"
+    crossorigin="anonymous"></script>
+
+  <title>Cosmic Daily | Horoscopes, Zodiac Compatibility, Tarot & Lucky Numbers</title>
+  <meta name="description" content="Get daily, weekly, monthly and yearly horoscopes for all zodiac signs. Explore love compatibility, tarot readings, Chinese zodiac, lucky numbers, lucky colors, career forecasts and birth chart insights." />
+  <meta name="keywords" content="daily horoscope, weekly horoscope, monthly horoscope, yearly horoscope, zodiac compatibility, tarot reading, lucky numbers, lucky color, birth chart, Chinese zodiac, astrology" />
+  <meta name="author" content="Cosmic Daily" />
+  <meta name="theme-color" content="#35106b" />
+
+  <meta property="og:title" content="Cosmic Daily Horoscope" />
+  <meta property="og:description" content="Personalized astrology readings, love compatibility, tarot, Chinese zodiac, lucky numbers, and career forecasts." />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cosmic Daily Horoscope" />
+  <meta name="twitter:description" content="Discover your zodiac horoscope, lucky numbers, love match, tarot card and career forecast." />
+
+  <link rel="manifest" href="manifest.json" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Cosmic Daily Horoscope",
+    "applicationCategory": "LifestyleApplication",
+    "description": "A horoscope website with daily, weekly, monthly, yearly, love compatibility, tarot, Chinese zodiac and lucky astrology readings."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg1: #14002e;
+      --bg2: #35106b;
+      --bg3: #0d1b4c;
+      --gold: #ffd776;
+      --pink: #ff78c8;
+      --text: #fff;
+      --card: rgba(255,255,255,.94);
+      --ink: #211034;
+      --muted: #e6dcff;
+      --purple: #5b1caf;
+    }
+
+    [data-theme="light"] {
+      --bg1: #f7efff;
+      --bg2: #e6d8ff;
+      --bg3: #d9ecff;
+      --text: #231437;
+      --card: rgba(255,255,255,.96);
+      --ink: #211034;
+      --muted: #503d6d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,.22), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(255, 214, 112, .18), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2) 48%, var(--bg3));
+      color: var(--text);
+      padding: 18px;
+    }
+
+    .app { width: min(1180px, 100%); margin: 0 auto; }
+    .panel {
+      background: rgba(255, 255, 255, 0.11);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 28px;
+      padding: clamp(20px, 4vw, 36px);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.30);
+      backdrop-filter: blur(18px);
+      margin-bottom: 18px;
+    }
+
+    header { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin-bottom: 22px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 950; font-size: 1.25rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+    nav a, .tiny-btn {
+      color: var(--text);
+      text-decoration: none;
+      background: rgba(255,255,255,.13);
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 9px 12px;
+      border-radius: 999px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .hero { text-align: center; padding: 16px 0 10px; }
+    .moon { font-size: 54px; margin-bottom: 8px; }
+    h1 { font-size: clamp(2rem, 5vw, 4.5rem); line-height: 1; margin-bottom: 12px; }
+    .hero p { color: var(--muted); max-width: 790px; margin: 0 auto; font-size: 1.08rem; line-height: 1.55; }
+
+    form, .tool-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 24px 0; align-items: end; }
+    label { display: block; color: var(--muted); font-weight: 850; margin-bottom: 8px; }
+    input, select, button, textarea {
+      width: 100%; border: 0; border-radius: 16px; padding: 15px 16px; font-size: 1rem;
+    }
+    input, select, textarea { background: rgba(255,255,255,.94); color: #24113f; outline: 2px solid transparent; }
+    input:focus, select:focus, textarea:focus { outline-color: #ffc8ff; }
+    button, .share-link, .cta {
+      background: linear-gradient(135deg, #ffcf70, #ff78c8);
+      color: #22072f;
+      font-weight: 950;
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      border-radius: 16px;
+    }
+    button:hover, .share-link:hover, .cta:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(255, 120, 200, .32); }
+
+    .summary, .ad-slot {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 22px;
+      padding: 18px;
+      margin: 16px 0;
+      line-height: 1.55;
+    }
+    .summary strong, .section-title span { color: var(--gold); }
+    .ad-slot { text-align: center; color: var(--muted); border-style: dashed; }
+
+    .section { margin-top: 26px; }
+    .section-title { font-size: clamp(1.35rem, 3vw, 2rem); margin-bottom: 14px; }
+    .cards, .feature-grid, .zodiac-grid, .article-grid { display: grid; gap: 14px; }
+    .cards { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .zodiac-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .article-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card, .feature-card, .zodiac-card, .article-card {
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 20px;
+      padding: 17px;
+      box-shadow: 0 12px 28px rgba(0,0,0,.16);
+    }
+    .card { min-height: 220px; display: flex; flex-direction: column; gap: 10px; }
+    .feature-card h3, .zodiac-card h3, .article-card h3 { color: var(--purple); margin-bottom: 9px; font-size: 1.08rem; }
+    .feature-card p, .zodiac-card p, .article-card p { line-height: 1.5; }
+    .day { font-weight: 950; color: var(--purple); }
+    .date { color: #69577e; font-size: .9rem; }
+    .message { line-height: 1.45; font-size: .96rem; }
+    .tag { margin-top: auto; width: fit-content; border-radius: 999px; padding: 6px 10px; background: #f1e8ff; color: var(--purple); font-size: .82rem; font-weight: 850; }
+    .share { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+    .share-link { border-radius: 999px; padding: 12px 16px; }
+    .newsletter { display: grid; grid-template-columns: 1.4fr 1fr auto; gap: 12px; align-items: end; }
+    footer { text-align: center; color: var(--muted); font-size: .9rem; line-height: 1.5; padding: 10px 0 24px; }
+    .hidden { display: none; }
+
+    @media (max-width: 1000px) {
+      form, .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cards, .feature-grid, .zodiac-grid, .article-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      header { align-items: flex-start; flex-direction: column; }
+      nav { justify-content: flex-start; }
+      .newsletter { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 10px; }
+      .panel { border-radius: 22px; }
+      form, .tool-grid, .cards, .feature-grid, .zodiac-grid, .article-grid { grid-template-columns: 1fr; }
+      .card { min-height: auto; }
+      nav a, .tiny-btn { font-size: .9rem; padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <section class="panel">
+      <header>
+        <div class="brand">🌙 Cosmic Daily</div>
+        <nav aria-label="Main navigation">
+          <a href="#reading">Reading</a>
+          <a href="#zodiac">Zodiac</a>
+          <a href="#compatibility">Love</a>
+          <a href="#tarot">Tarot</a>
+          <a href="#blog">SEO Blog</a>
+          <button class="tiny-btn" id="themeToggle" type="button">Light/Dark</button>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="moon">✨</div>
+        <h1>Horoscope, Love, Luck & Tarot</h1>
+        <p>Get personalized daily, weekly, monthly, and yearly astrology readings. Explore zodiac compatibility, Chinese zodiac, tarot cards, career forecasts, lucky numbers, lucky colors, and shareable readings.</p>
+      </section>
+
+      <form id="horoscopeForm">
+        <div><label for="dob">Date of birth</label><input id="dob" name="dob" type="date" required /></div>
+        <div><label for="birthTime">Birth time</label><input id="birthTime" name="birthTime" type="time" /></div>
+        <div><label for="gender">Gender</label><select id="gender" name="gender" required><option value="">Choose one</option><option>Female</option><option>Male</option><option>Non-binary</option><option>Prefer not to say</option></select></div>
+        <div><label for="partnerSign">Partner sign</label><select id="partnerSign" name="partnerSign"><option value="">Optional</option></select></div>
+        <div><label for="birthPlace">Birth place</label><input id="birthPlace" name="birthPlace" placeholder="City, country" /></div>
+        <div><label for="language">Language</label><select id="language"><option>English</option><option>Spanish</option><option>French</option><option>Hindi</option></select></div>
+        <div><label for="readingType">Reading type</label><select id="readingType"><option>General</option><option>Love</option><option>Career</option><option>Health</option><option>Finance</option></select></div>
+        <button type="submit">Reveal my horoscope</button>
+      </form>
+
+      <div class="ad-slot">Ad placeholder: replace this box with your Google AdSense code after approval.</div>
+      <section id="summary" class="summary hidden"></section>
+      <div id="share" class="share hidden">
+        <a id="facebookShare" class="share-link" target="_blank" rel="noopener">Share on Facebook</a>
+        <a id="linkedinShare" class="share-link" target="_blank" rel="noopener">Share on LinkedIn</a>
+        <a id="xShare" class="share-link" target="_blank" rel="noopener">Share on X</a>
+        <button id="tiktokShare" type="button">Share on TikTok</button>
+        <button id="instagramShare" type="button">Share on Instagram</button>
+        <button id="copyShare" type="button">Copy Link</button>
+      </div>
+    </section>
+
+    <section id="reading" class="panel">
+      <h2 class="section-title"><span>Daily, Weekly, Monthly & Yearly</span> Horoscope</h2>
+      <div id="daily" class="feature-grid"></div>
+      <h3 class="section-title" style="margin-top:24px;"><span>7-Day</span> Forecast</h3>
+      <div id="cards" class="cards"></div>
+      <h3 class="section-title" style="margin-top:24px;"><span>Monthly & Yearly</span> Insights</h3>
+      <div id="longRange" class="feature-grid"></div>
+    </section>
+
+    <section id="compatibility" class="panel">
+      <h2 class="section-title"><span>Love Compatibility</span>, Luck & Career</h2>
+      <div id="extras" class="feature-grid"></div>
+    </section>
+
+    <section id="tarot" class="panel">
+      <h2 class="section-title"><span>Tarot</span> Card Reading</h2>
+      <div class="tool-grid">
+        <div><label for="tarotQuestion">Ask a question</label><input id="tarotQuestion" placeholder="What should I focus on?" /></div>
+        <button id="drawTarot" type="button">Draw Tarot Card</button>
+      </div>
+      <div id="tarotResult" class="feature-grid"></div>
+    </section>
+
+    <section id="zodiac" class="panel">
+      <h2 class="section-title"><span>All 12 Zodiac Signs</span></h2>
+      <div id="zodiacGrid" class="zodiac-grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title"><span>Chinese Zodiac</span> Calculator</h2>
+      <div id="chineseZodiac" class="feature-grid"></div>
+    </section>
+
+    <section id="blog" class="panel">
+      <h2 class="section-title"><span>SEO Horoscope Articles</span></h2>
+      <div class="article-grid">
+        <article class="article-card"><h3>Daily Horoscope Guide</h3><p>Daily horoscope pages help visitors return often. Create separate pages for Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, and Pisces.</p></article>
+        <article class="article-card"><h3>Love Compatibility</h3><p>Compatibility pages can target searches like Aries and Leo compatibility, Virgo and Pisces love match, and best zodiac signs for marriage.</p></article>
+        <article class="article-card"><h3>Lucky Numbers & Colors</h3><p>Lucky number and lucky color content creates quick, shareable readings that work well on mobile and social media.</p></article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title"><span>Email Newsletter</span></h2>
+      <form class="newsletter" id="newsletterForm">
+        <div><label for="email">Get daily horoscope emails</label><input id="email" type="email" placeholder="you@example.com" required /></div>
+        <div><label for="newsletterSign">Your sign</label><select id="newsletterSign"></select></div>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="newsletterMessage" style="margin-top:12px;color:var(--muted);"></p>
+    </section>
+
+    <footer>For entertainment only. This site includes ad placeholders, SEO metadata, PWA manifest, share buttons, and content sections ready for hosting.</footer>
+  </div>
+
+  <script>
+    const zodiacSigns = [
+      { sign: "Aries", dates: "Mar 21 - Apr 19", icon: "♈", element: "Fire", trait: "bold action" },
+      { sign: "Taurus", dates: "Apr 20 - May 20", icon: "♉", element: "Earth", trait: "steady growth" },
+      { sign: "Gemini", dates: "May 21 - Jun 20", icon: "♊", element: "Air", trait: "curious ideas" },
+      { sign: "Cancer", dates: "Jun 21 - Jul 22", icon: "♋", element: "Water", trait: "emotional wisdom" },
+      { sign: "Leo", dates: "Jul 23 - Aug 22", icon: "♌", element: "Fire", trait: "creative courage" },
+      { sign: "Virgo", dates: "Aug 23 - Sep 22", icon: "♍", element: "Earth", trait: "practical focus" },
+      { sign: "Libra", dates: "Sep 23 - Oct 22", icon: "♎", element: "Air", trait: "balanced connection" },
+      { sign: "Scorpio", dates: "Oct 23 - Nov 21", icon: "♏", element: "Water", trait: "deep transformation" },
+      { sign: "Sagittarius", dates: "Nov 22 - Dec 21", icon: "♐", element: "Fire", trait: "adventurous truth" },
+      { sign: "Capricorn", dates: "Dec 22 - Jan 19", icon: "♑", element: "Earth", trait: "disciplined ambition" },
+      { sign: "Aquarius", dates: "Jan 20 - Feb 18", icon: "♒", element: "Air", trait: "original thinking" },
+      { sign: "Pisces", dates: "Feb 19 - Mar 20", icon: "♓", element: "Water", trait: "intuitive dreams" }
+    ];
+
+    const horoscopeLines = [
+      "A fresh conversation opens a door you thought was closed. Stay curious and respond with warmth.",
+      "Your instincts are sharper than usual. Trust the small signal before it becomes impossible to ignore.",
+      "A practical choice brings emotional relief. Handle one unfinished task and your mood will lift.",
+      "Someone notices your effort. Accept the compliment instead of brushing it away.",
+      "The day favors patience. Move slowly, choose clearly, and let timing work for you.",
+      "A playful risk could brighten your routine. Say yes to something light, social, or creative.",
+      "Protect your energy today. A quiet reset will help you return stronger tomorrow.",
+      "A money or work matter becomes clearer when you ask one direct question.",
+      "Your charm is high. Use it to repair, reconnect, or make a sincere request.",
+      "The stars point toward learning. A useful idea appears from an unexpected source."
+    ];
+
+    const monthlyThemes = [
+      "This month rewards consistency. Small choices made daily can turn into a meaningful breakthrough.",
+      "Relationships take center stage. Clear communication helps you avoid confusion and deepen trust.",
+      "Your confidence grows when you simplify. Choose fewer goals and give them your best energy.",
+      "A new opportunity may arrive through someone you already know. Stay open to invitations.",
+      "Rest and reflection are part of your progress. Do not rush what needs time to mature."
+    ];
+
+    const careerLines = [
+      "Focus on visibility. Share your work, ask for feedback, and let people know what you are building.",
+      "A practical improvement at work can create momentum. Organize, document, or finish a delayed task.",
+      "Collaboration brings the best results. The right teammate helps you solve a stubborn problem.",
+      "Avoid rushing a big decision. The strongest career move is the one you can explain clearly.",
+      "A learning opportunity could increase your value. Say yes to training, practice, or mentorship."
+    ];
+
+    const tarotCards = [
+      ["The Fool", "Begin again with courage. A new path opens when you stop demanding certainty."],
+      ["The Magician", "Use what you already have. Your skill, voice, and timing are enough to start."],
+      ["The High Priestess", "Listen closely to your intuition. Not every answer needs to be announced."],
+      ["The Empress", "Create, nurture, and receive. Growth comes from patience and care."],
+      ["The Star", "Hope returns. Choose the option that restores your belief in the future."],
+      ["The Sun", "Clarity and joy are near. Let yourself be seen without shrinking."],
+      ["Strength", "Gentleness is power today. Lead with calm confidence."],
+      ["The World", "A cycle is completing. Celebrate progress before chasing the next mountain."]
+    ];
+
+    const colors = ["Royal purple", "Gold", "Sky blue", "Rose pink", "Emerald green", "Silver", "Sunset orange", "Deep indigo"];
+    const focusTags = ["Love", "Career", "Money", "Health", "Friendship", "Creativity", "Peace"];
+    const chineseAnimals = ["Monkey", "Rooster", "Dog", "Pig", "Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat"];
+
+    function initSelects() {
+      [document.getElementById("partnerSign"), document.getElementById("newsletterSign")].forEach(sel => {
+        zodiacSigns.forEach(z => {
+          const opt = document.createElement("option");
+          opt.value = z.sign;
+          opt.textContent = `${z.icon} ${z.sign}`;
+          sel.appendChild(opt);
+        });
+      });
+    }
+
+    function getZodiac(dateValue) {
+      const date = new Date(dateValue + "T12:00:00");
+      const m = date.getMonth() + 1;
+      const d = date.getDate();
+      const ranges = [
+        ["Capricorn",12,22,1,19],["Aquarius",1,20,2,18],["Pisces",2,19,3,20],["Aries",3,21,4,19],
+        ["Taurus",4,20,5,20],["Gemini",5,21,6,20],["Cancer",6,21,7,22],["Leo",7,23,8,22],
+        ["Virgo",8,23,9,22],["Libra",9,23,10,22],["Scorpio",10,23,11,21],["Sagittarius",11,22,12,21]
+      ];
+      const found = ranges.find(([name, sm, sd, em, ed]) => sm > em ? ((m === sm && d >= sd) || (m === em && d <= ed)) : ((m === sm && d >= sd) || (m === em && d <= ed) || (m > sm && m < em)));
+      return zodiacSigns.find(z => z.sign === found[0]);
+    }
+
+    function getAge(dateValue) {
+      const today = new Date();
+      const birth = new Date(dateValue + "T12:00:00");
+      let age = today.getFullYear() - birth.getFullYear();
+      const hadBirthday = today.getMonth() > birth.getMonth() || (today.getMonth() === birth.getMonth() && today.getDate() >= birth.getDate());
+      if (!hadBirthday) age--;
+      return age;
+    }
+
+    function seedValue(sign, gender, age, extra = 0) {
+      return sign.split("").reduce((sum, char) => sum + char.charCodeAt(0), 0) + gender.length + age + extra;
+    }
+    function pick(list, seed) { return list[Math.abs(seed) % list.length]; }
+    function formatDate(date) { return date.toLocaleDateString(undefined, { month: "short", day: "numeric" }); }
+    function luckyNumbers(seed) {
+      const numbers = [];
+      for (let i = 0; i < 5; i++) numbers.push(((seed + i * 7) % 49) + 1);
+      return numbers.join(", ");
+    }
+    function compatibility(sign, partnerSign) {
+      if (!partnerSign) return "Choose a partner sign to reveal a compatibility reading. Today, honest communication is your strongest love energy.";
+      const self = zodiacSigns.find(z => z.sign === sign);
+      const partner = zodiacSigns.find(z => z.sign === partnerSign);
+      const score = 55 + ((self.sign.length * partner.sign.length) % 41);
+      if (self.element === partner.element) return `${sign} and ${partnerSign} share ${self.element} energy. Compatibility score: ${Math.min(score + 4, 99)}%. This pairing feels natural when both people respect each other's rhythm.`;
+      return `${sign} and ${partnerSign} can balance each other beautifully. Compatibility score: ${score}%. Curiosity, patience, and humor make this connection stronger.`;
+    }
+    function chineseZodiac(year) { return chineseAnimals[year % 12]; }
+
+    function renderZodiacGrid() {
+      document.getElementById("zodiacGrid").innerHTML = zodiacSigns.map(z => `
+        <article class="zodiac-card"><h3>${z.icon} ${z.sign}</h3><p><strong>${z.dates}</strong></p><p>${z.element} sign focused on ${z.trait}. Readings update when visitors enter their birth date.</p></article>
+      `).join("");
+    }
+
+    document.getElementById("horoscopeForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const dob = document.getElementById("dob").value;
+      const birthTime = document.getElementById("birthTime").value || "unknown";
+      const gender = document.getElementById("gender").value;
+      const partnerSign = document.getElementById("partnerSign").value;
+      const birthPlace = document.getElementById("birthPlace").value || "your birthplace";
+      const readingType = document.getElementById("readingType").value;
+      const zodiac = getZodiac(dob);
+      const age = getAge(dob);
+      const seed = seedValue(zodiac.sign, gender, age);
+
+      document.title = `${zodiac.sign} Horoscope | Daily, Weekly, Monthly & Love Reading`;
+
+      const summary = document.getElementById("summary");
+      summary.classList.remove("hidden");
+      summary.innerHTML = `<p>Your sign is <strong>${zodiac.icon} ${zodiac.sign}</strong>, a ${zodiac.element} sign. Your selected focus is <strong>${readingType}</strong>. Birth chart-style note: birth time <strong>${birthTime}</strong>, birthplace <strong>${birthPlace}</strong>.</p>`;
+
+      document.getElementById("daily").innerHTML = `
+        <article class="feature-card"><h3>Today</h3><p>${pick(horoscopeLines, seed)}</p></article>
+        <article class="feature-card"><h3>Tomorrow</h3><p>${pick(horoscopeLines, seed + 2)}</p></article>
+        <article class="feature-card"><h3>Daily Energy</h3><p>Lead with your ${zodiac.element.toLowerCase()} nature. Make one choice that feels calm, honest, and aligned.</p></article>`;
+
+      const cards = document.getElementById("cards");
+      cards.innerHTML = "";
+      const today = new Date();
+      for (let i = 0; i < 7; i++) {
+        const current = new Date(today);
+        current.setDate(today.getDate() + i);
+        const dayName = current.toLocaleDateString(undefined, { weekday: "long" });
+        const tag = focusTags[(zodiac.sign.length + gender.length + i) % focusTags.length];
+        const card = document.createElement("article");
+        card.className = "card";
+        card.innerHTML = `<div class="day">${i === 0 ? "Today" : dayName}</div><div class="date">${formatDate(current)}</div><p class="message">${pick(horoscopeLines, seed + i)}</p><span class="tag">${tag}</span>`;
+        cards.appendChild(card);
+      }
+
+      document.getElementById("longRange").innerHTML = `
+        <article class="feature-card"><h3>Monthly Horoscope</h3><p>${pick(monthlyThemes, seed)}</p></article>
+        <article class="feature-card"><h3>Yearly Horoscope</h3><p>This year favors long-term growth, meaningful relationships, and better routines. Your best results come from repeated effort.</p></article>
+        <article class="feature-card"><h3>Birth Chart Insight</h3><p>Your sun sign is ${zodiac.sign}. For a true natal chart, connect a real astrology API later using birth date, exact time, and birthplace.</p></article>`;
+
+      document.getElementById("extras").innerHTML = `
+        <article class="feature-card"><h3>Love Compatibility</h3><p>${compatibility(zodiac.sign, partnerSign)}</p></article>
+        <article class="feature-card"><h3>Lucky Numbers</h3><p>${luckyNumbers(seed)}</p></article>
+        <article class="feature-card"><h3>Lucky Color</h3><p>${pick(colors, seed)}</p></article>
+        <article class="feature-card"><h3>Career Prediction</h3><p>${pick(careerLines, seed)}</p></article>
+        <article class="feature-card"><h3>Finance Forecast</h3><p>Keep spending intentional. A small saving decision now can support a larger goal later.</p></article>
+        <article class="feature-card"><h3>Health & Wellness</h3><p>Your body benefits from rhythm. Prioritize hydration, movement, sleep, and one peaceful pause.</p></article>`;
+
+      const birthYear = new Date(dob + "T12:00:00").getFullYear();
+      document.getElementById("chineseZodiac").innerHTML = `
+        <article class="feature-card"><h3>Chinese Zodiac</h3><p>Your Chinese zodiac animal is <strong>${chineseZodiac(birthYear)}</strong>.</p></article>
+        <article class="feature-card"><h3>Elemental Mood</h3><p>Your Western element is <strong>${zodiac.element}</strong>, which shapes your weekly energy.</p></article>
+        <article class="feature-card"><h3>Lucky Day</h3><p>${pick(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], seed)}</p></article>`;
+
+      const share = document.getElementById("share");
+      share.classList.remove("hidden");
+      const pageUrl = encodeURIComponent(window.location.href);
+      const shareText = encodeURIComponent(`I just discovered my ${zodiac.sign} horoscope on Cosmic Daily!`);
+      document.getElementById("facebookShare").href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+      document.getElementById("linkedinShare").href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+      document.getElementById("xShare").href = `https://twitter.com/intent/tweet?text=${shareText}&url=${pageUrl}`;
+      summary.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    document.getElementById("drawTarot").addEventListener("click", () => {
+      const q = document.getElementById("tarotQuestion").value || "your next step";
+      const seed = q.split("").reduce((s, c) => s + c.charCodeAt(0), 0);
+      const card = pick(tarotCards, seed);
+      document.getElementById("tarotResult").innerHTML = `<article class="feature-card"><h3>${card[0]}</h3><p>${card[1]}</p></article><article class="feature-card"><h3>Your Question</h3><p>${q}</p></article><article class="feature-card"><h3>Action</h3><p>Take one grounded step today instead of waiting for perfect timing.</p></article>`;
+    });
+
+    async function copyShareText(platformName) {
+      const text = `Check out my horoscope on Cosmic Daily: ${window.location.href}`;
+      await navigator.clipboard.writeText(text);
+      alert(`${platformName} does not support direct website sharing from a browser. The share text was copied. Paste it into your ${platformName} post or bio link.`);
+    }
+
+    document.getElementById("copyShare").addEventListener("click", async () => {
+      await navigator.clipboard.writeText(window.location.href);
+      alert("Link copied!");
+    });
+
+    document.getElementById("tiktokShare").addEventListener("click", async () => {
+      await copyShareText("TikTok");
+      window.open("https://www.tiktok.com/upload", "_blank", "noopener");
+    });
+
+    document.getElementById("instagramShare").addEventListener("click", async () => {
+      await copyShareText("Instagram");
+      window.open("https://www.instagram.com/", "_blank", "noopener");
+    });
+
+    document.getElementById("newsletterForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const sign = document.getElementById("newsletterSign").value;
+      localStorage.setItem("newsletter", JSON.stringify({ email, sign }));
+      document.getElementById("newsletterMessage").textContent = `Subscribed locally for ${sign}. Connect Mailchimp, ConvertKit, or Beehiiv later for real email delivery.`;
+    });
+
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      const next = document.documentElement.dataset.theme === "light" ? "" : "light";
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem("theme", next);
+    });
+
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    initSelects();
+    renderZodiacGrid();
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js").catch(() => {});
+    }
+  </script>
+</body>
+</html>
